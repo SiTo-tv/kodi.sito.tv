@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Authorization">
+        <setting label="Authorized" type="bool" id="is_athorized" default="false" enable="false"/>
+        <setting label="Email" type="text" id="user_email" default=""/>
+        <setting label="Send authorization email" type="action" action="RunScript(kodi.sito.tv, custom_action, authorization)" visible="!eq(-1,)" subsetting="true"/>
+        <setting label="Auth code from email" type="text" id="auth_code" option="hidden" enable="!eq(-2,)" default="" subsetting="true"/>
+        <setting label="Auth Result Token" type="text" id="auth_token" default="" visible="false" subsetting="true"/>
+
+        <setting label="Last update time" type="number" id="last_update_time" default="0" visible="false" subsetting="true"/>
+        <setting label="Last update check time" type="number" id="last_update_check_time" default="0" visible="false" subsetting="true"/>
+    </category>
+
+    <category label="Plugin customization">
+        <setting id="api_url" type="text" label="Custom data API URL" default=""/>
+        <setting id="min_seeders" type="select" label="Minimum number of seeders" values="0|1|5|10|20" default="0"/>
+        <setting id="adult_content" type="bool" label="Show adult content" default="false" visible="false"/>
+        <setting id="language" type="select" label="Choose language" values="English|Serbian" default="English" visible="false"/>
+    </category>
+
+    <category label="Actions">
+        <setting id="update_plugins" type="action" label="Check for updates" action="RunScript(kodi.sito.tv, custom_action, update_plugin)"/>
+        <setting type="sep"/>
+        <setting id="bug_report" type="action" label="Send bug report" action="RunScript(kodi.sito.tv, custom_action, bug_report)"/>
+        <setting id="show_log" type="action" label="Show log (not supported now)" action="RunScript(kodi.sito.tv, custom_action, show_log)"/>
+    </category>
+</settings>

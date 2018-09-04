@@ -1,38 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="kodi.sito.tv" name="SiTo" version="1.3.3" provider-name="SiTo.tv">
+<addon id="plugin.video.sito.tv" name="SiTo" version="1.3.1" provider-name="SiTo.tv">
     <requires>
-        <!-- At least Kodi v13 is needed for android intents functionality-->
+        <import addon="xbmc.python" version="2.25.0"/>
         <import addon="xbmc.addon" version="13.0.0"/>
-        <import addon="xbmc.python" version="2.14.0"/>
+        <import addon="script.module.kodiswift" version="0.0.8"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <news>
-            [feature] Settings
-            [feature] Recently viewed
-            [feature] Kodi Favorites support
-            [feature] Lookup media by alphabet
-            [feature] Choose torrent variant for movie
-            [feature] Collections support
-            [feature] Torrent files are used instead of raw magnet links, when available
+            [license] GNUv3
+            [feature] Support for custom data API URL
         </news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
-        <platform>all</platform>
+
+        <platform>android linux</platform>
         <language>en</language>
-        <summary lang="en">SiTo Add-On - search and download movies from torrents</summary>
-        <description lang="en">Download and watch favorite movies and TV-shows from torrents</description>
+
+        <summary lang="en_GB">Stream public domain and other non-copyrighted movies and TV-shows for free</summary>
+        <description lang="en_GB">Stream public domain and other non-copyrighted movies and TV-shows for free</description>
+        <disclaimer lang="en_GB">Requires BitX Player</disclaimer>
+
+        <license>GNU General Public License, v3</license>
         <website>http://sito.tv/</website>
         <email>support at sito dot tv</email>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    </extension>
-    <extension point="xbmc.addon.repository" name="SiTo Add-On Repository">
-        <info compressed="true">http://sito.tv/addon/kodi-repo/addons.xml</info>
-        <checksum>http://sito.tv/addon/kodi-repo/addons.xml.md5</checksum>
-        <datadir zip="true">http://sito.tv/addon/kodi-repo/data/</datadir>
     </extension>
 </addon>
